@@ -1,0 +1,156 @@
+/*sempre lembrar de linkar o css no html para aplicar os estilos*/
+
+/*.curriculo{ 
+
+    color:brown;
+}     eu posso estilizar uma class especifica usando isso*/
+
+body{     /*essa é a tag inteira, o corpo*/
+
+    background-image: url(../imagens/fundo-site.jpg);                /*é usado mais pontos no url para voltar as pastas*/
+    background-repeat: no-repeat;                                    /*usado para nao repetir a imagem*/
+    background-size: cover;                                           /*usado para aparecer a imagem completa*/
+    background-position: center;                                      /*é usado para centralizar a imagem*/
+    font-family: 'VT323', monospace;                                  /*é usado para usar essa foto, monospace porque se nao for possivel usar a fonte, ele achar uma parecida*/
+    color: #f3f3f3;                                                 /*cor da fonte*/
+    font-size: 15px;                                                  /*tamanho da fonte*/
+    display:flex;                                                     /*é preciso usar esse codigo na tag pai para alterar o posicionamento das subtags*/
+    justify-content: center;                                          /*é uma propriedade do flex, para centralizar horizontalmente todo o conteudo*/
+    align-items: center;                                              /*alinhar verticalmente, se nao tem espaco na tela para alinhar, é preciso forcar uma medida*/
+    min-height: 100vh;                                                 /*altura minima é 100...vh=altura da janela*/
+    padding:30px;                                                      /*espacamento externo*/
+}
+
+.cartao{
+    /*para estilizar tags usa o ponto*/
+    background-color: black;           /*cor do cartao*/
+    width: 370px;                        /*largura do cartao*/
+    border: 2px solid #e126d9;         /*borda do cartao*/
+    border-radius: 10px;                 /*angulo do cartao nas bordas*/
+    overflow: hidden;                    /*bordas curvadas*/
+
+}
+
+.abas img{                              /*diminuir os icones*/
+    width: 30px;
+}
+
+.cartao .minhas-informacoes{              /*caminho especifico*/
+    padding-top: 20px;                    /*espacamento externo na foto*/
+    display:flex;                          /*usado na tag para alterar as subtags, esse flex coloca sempre as imagens em linha um do lado do outro*/
+    flex-direction: column;                /*usado para centralizar a foto, nome e cargo*/
+    align-items: center;                    /*alinha horizontalmente por causa do flex direction column*/
+    gap: 10px;                             /*espacamento entre itens*/
+
+
+}
+.cartao .minhas-informacoes img{
+    border-radius: 50px;
+    border: 4px solid #02d08f;
+}
+
+.cartao .minhas-informacoes .nome{
+    font-size: 26px;
+}
+.cartao .minhas-informacoes .cargo{
+    font-size: 20px;
+    color:#b8bbc5;
+}
+
+.cartao .conteudo{
+    margin-top:15px;                  /*espacamento entre os cartoes*/           
+
+}
+.cartao .abas{
+    display: flex;                    /*por padrao usando esse comando ele ja usa o flex direction row, o qual faz ficar um do lado do outro*/
+}
+
+.cartao .abas .aba{
+    width: 50%;                       /*pega a largura e divide em 50%*/  
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    cursor: pointer;                   /*para dar um efeito de clique nos icones, simulando que posso clicar*/  
+    transition: background-color 0.2s ease-in-out;       /*transicao da transparencia dos quadrados dos icones*/
+}
+
+.cartao .abas .aba.selecionado{         /*.aba.selecionado sem espaco estiliza somente essa aba*/  
+    background-color: #262626;       /*usado para colorir o quadrado que vai o icone do pc*/
+
+}
+
+.cartao .informacoes-abas {
+    background-color: #262626;
+}
+.cartao .abas .aba:hover{                         /*muda de cor quando passa o mouse nos icones*/
+    background-color: #414141;
+
+}
+.informacoes-abas .informacao{
+   min-height: 260px;
+   padding: 15px;
+   display: none;        /*serve para mostrar somente a aba selecionada: sobre ou minhas redes*/
+}
+
+.informacoes-abas .informacao.selecionado{
+    display: block;
+}
+
+
+.informacoes-abas .sub-titulo{    /*alterar o sobre e minhas redes*/
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-align: center;
+
+}
+
+.informacoes-abas .descricao{
+    font-size: 20px;
+    max-height: 180px;
+    overflow-y: auto;           /*criar o scroll para rolagem*/
+    padding-right: 15px;
+
+
+
+}
+
+.informacoes-abas .descricao span{
+    color:#02d08f
+}
+
+.redes-sociais{
+   display: flex;
+   flex-direction: column;
+   gap: 25px;
+   align-items: center;
+   max-height: 180px;   /*altura maxima*/
+   overflow: auto;
+
+
+}
+
+.redes-sociais li a{
+    background-color: crimson;
+    width: 250px;
+    display: block;           /*deixou o retangulo dos links iguais*/
+    color:#f3f3f3;
+    text-align: center;
+    padding:10px;           /*para aumentar o botao*/
+    font-size: 20px;
+    transition: opacity 0.3s ease-in-out;              /*opacidade nos botoes*/
+}
+.redes-sociais li a:hover{
+    opacity: 0.8;        /*opacidade nos botoes*/
+}
+
+.redes-sociais .curriculo{
+    background-color: #06c185;
+}
+
+.redes-sociais .linkedin{
+    background-color: #1d87bd;
+}
+
+.redes-sociais .github{
+    background-color: #545454;
+}

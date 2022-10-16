@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <!--é preciso linkar o css no html para funcionar o reset-->
+    <link rel="stylesheet" href="./src/css/estilos.css">
+
+    <title>Projeto Mini-Portfólio</title>
+</head>
+<body>
+    <main class="cartao"> <!--essa tag se refere ao quadrado maior-->
+        <div class="minhas-informacoes"> <!--essa tag se refere ao quadrado que armazena a foto, nome e cargo-->
+            <img src="./src/imagens/foto-perfil.jpg" alt="foto de perfil"> <!--essa tag carrega a foto, alt porque se caso a foto nao carregar, sabe que é foto de perfil-->
+            
+            <h1 class="nome">Guilherme dos Santos Benedett</h1> <!--tag usada para colocar um titulo-->
+             <h2 class="cargo">Desenvolvedor FrontEnd Júnior</h2> <!--tag usada tambem para colocar um titulo, só que com menos importancia-->
+
+        </div>
+        <div class="conteudo"> <!--essa tag se refere ao quadrado que engloba os icones, descricao e links-->
+            <ul class="abas"> <!--essa tag se refere a aba do coracao e pc-->
+                <li class="aba selecionado" id="sobre-mim"> <!--somente essa tag é permitida dentro da tag ul-->
+                    <img src="./src/imagens/sobre.gif" alt="descricao do guilherme">
+                </li>
+                <li class="aba" id="minhas-redes">
+                    <img src="./src/imagens/coracao.gif" alt="coracao com os links">
+                
+                </li>
+            </ul>
+            
+            <div class="informacoes-abas"> <!--essa tag se refere ao quadrado da descricao e os quadrados com links-->
+                <div class="informacao selecionado" id="informacao-sobre-mim"> <!--essa tag forma um quadrado para ser escrito h3-->
+                    <h3 class="sub-titulo">Sobre</h3>
+                
+                    <div class="descricao"> <!-- essa tag forma um quadrado com a descricao de guilherme-->
+                        <p> Ola! Meu nome é Guilherme dos Santos Benedett, seja bem-vindo(a)! <!--essa tag é para colar o texto e é somente 1 paragrafo-->
+                      
+                        </p>
+                       
+                        <p>Sempre tive o sonho de trabalhar com programação e atualmente comecei a colocar esse sonho em prática estudando <span>HTML, CSS e JavaScript</span>. Hoje em dia, estou matriculado no curso de tecnologo em 
+                            análise e desenvolvimento de sistemas para aprimorar meu aprendizado. Procuro praticar o conhecimento adquirido no curso e fora dele atraves de projetos que me tragam experiencia em programação.  <!--usado parta outro paragrafo--> <!--span usado para colocar efeito nas palavras-->
+
+                        </p>
+                    </div>
+            </div>
+            <div class="informacao" id="informacao-minhas-redes"> 
+                <h3 class="sub-titulo">Minhas Redes</h3>
+
+                <ul class="redes-sociais"> <!--é usada para uma lista que nao esta ordenada-->
+                    <li>
+                        <a href="" target="_blank" class="curriculo">Currículo</a> <!--tag usada para que quando clicar ele direcione para uma pagina da web. a=ancora-->
+                                                                 <!--em href se cola o link do navegador ou do lugar do arquivo-->
+                                                                 <!--target=blank para abrir uma nova aba-->                                                       
+                    </li>
+                    <li>
+                        <a href="" target="_blank" class="linkedin">LinkedIn</a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank" class="github">GitHub</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+   
+    </main>
+
+    <script src="./src/js/index.js"></script>
+</body>
+</html>
+
+<!--é usado class nas tags para ser mais facil estilizar no css-->

@@ -1,0 +1,30 @@
+/* o reset é usado para resetar todos os estilos que o navegador da para as tags do html, com * ele alcanca todas as tags*/
+*{
+    margin: 0;                  /*define espacamentos externos dos elementos*/
+    padding: 0;                 /*define espacamento interno dos elementos*/
+    box-sizing: border-box;      /*bom usar essa*/
+
+
+
+
+}
+
+ul{
+
+
+    list-style: none;          /*tirar todo os estilo da lista, tirar os 3 pontinhos*/
+
+
+
+
+
+
+
+
+}
+
+a{
+    text-decoration: none;              /*tirar o estilo dos links curriculo, linkedin, github*/
+    color:black                         /*cor das palavras*/
+
+}
